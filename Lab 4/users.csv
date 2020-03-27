@@ -1,0 +1,101 @@
+user_id,gender,age,occupation,zipcode,age_desc,occ_desc
+1,F,1,10,48067,Under 18,K-12 student
+2,M,56,16,70072,56+,self-employed
+3,M,25,15,55117,25-34,scientist
+4,M,45,7,2460,45-49,executive/managerial
+5,M,25,20,55455,25-34,writer
+6,F,50,9,55117,50-55,homemaker
+7,M,35,1,6810,35-44,academic/educator
+8,M,25,12,11413,25-34,programmer
+9,M,25,17,61614,25-34,technician/engineer
+10,F,35,1,95370,35-44,academic/educator
+11,F,25,1,4093,25-34,academic/educator
+12,M,25,12,32793,25-34,programmer
+13,M,45,1,93304,45-49,academic/educator
+14,M,35,0,60126,35-44,other or not specified
+15,M,25,7,22903,25-34,executive/managerial
+16,F,35,0,20670,35-44,other or not specified
+17,M,50,1,95350,50-55,academic/educator
+18,F,18,3,95825,18-24,clerical/admin
+19,M,1,10,48073,Under 18,K-12 student
+20,M,25,14,55113,25-34,sales/marketing
+21,M,18,16,99353,18-24,self-employed
+22,M,18,15,53706,18-24,scientist
+23,M,35,0,90049,35-44,other or not specified
+24,F,25,7,10023,25-34,executive/managerial
+25,M,18,4,1609,18-24,college/grad student
+26,M,25,7,23112,25-34,executive/managerial
+27,M,25,11,19130,25-34,lawyer
+28,F,25,1,14607,25-34,academic/educator
+29,M,35,7,33407,35-44,executive/managerial
+30,F,35,7,19143,35-44,executive/managerial
+31,M,56,7,6840,56+,executive/managerial
+32,F,25,0,19355,25-34,other or not specified
+33,M,45,3,55421,45-49,clerical/admin
+34,F,18,0,2135,18-24,other or not specified
+35,M,45,1,2482,45-49,academic/educator
+36,M,25,3,94123,25-34,clerical/admin
+37,F,25,9,66212,25-34,homemaker
+38,F,18,4,2215,18-24,college/grad student
+39,M,18,4,61820,18-24,college/grad student
+40,M,45,0,10543,45-49,other or not specified
+41,F,18,4,15116,18-24,college/grad student
+42,M,25,8,24502,25-34,farmer
+43,M,25,12,60614,25-34,programmer
+44,M,45,17,98052,45-49,technician/engineer
+45,F,45,16,94110,45-49,self-employed
+46,M,18,19,75602,18-24,unemployed
+47,M,18,4,94305,18-24,college/grad student
+48,M,25,4,92107,25-34,college/grad student
+49,M,18,12,77084,18-24,programmer
+50,F,25,2,98133,25-34,artist
+51,F,1,10,10562,Under 18,K-12 student
+52,M,18,4,72212,18-24,college/grad student
+53,M,25,0,96931,25-34,other or not specified
+54,M,50,1,56723,50-55,academic/educator
+55,F,35,12,55303,35-44,programmer
+56,M,35,20,60440,35-44,writer
+57,M,18,19,30350,18-24,unemployed
+58,M,25,2,30303,25-34,artist
+59,F,50,1,55413,50-55,academic/educator
+60,M,50,1,72118,50-55,academic/educator
+61,M,25,17,95122,25-34,technician/engineer
+62,F,35,3,98105,35-44,clerical/admin
+63,M,18,4,54902,18-24,college/grad student
+64,M,18,1,53706,18-24,academic/educator
+65,M,35,12,55803,35-44,programmer
+66,M,25,18,57706,25-34,tradesman/craftsman
+67,F,50,5,60181,50-55,customer service
+68,M,18,4,53706,18-24,college/grad student
+69,F,25,1,2143,25-34,academic/educator
+70,M,18,4,53703,18-24,college/grad student
+71,M,25,14,95008,25-34,sales/marketing
+72,F,45,0,55122,45-49,other or not specified
+73,M,18,4,53706,18-24,college/grad student
+74,M,35,14,94530,35-44,sales/marketing
+75,F,1,10,1748,Under 18,K-12 student
+76,M,35,7,55413,35-44,executive/managerial
+77,M,18,4,15321,18-24,college/grad student
+78,F,45,1,98029,45-49,academic/educator
+79,F,45,0,98103,45-49,other or not specified
+80,M,56,1,49327,56+,academic/educator
+81,F,25,0,60640,25-34,other or not specified
+82,M,25,17,48380,25-34,technician/engineer
+83,F,25,2,94609,25-34,artist
+84,M,18,4,53140,18-24,college/grad student
+85,M,18,4,94945,18-24,college/grad student
+86,F,1,10,54467,Under 18,K-12 student
+87,M,25,14,48360,25-34,sales/marketing
+88,F,45,1,2476,45-49,academic/educator
+89,F,56,9,85749,56+,homemaker
+90,M,56,13,85749,56+,retired
+91,M,35,7,7650,35-44,executive/managerial
+92,F,18,4,44243,18-24,college/grad student
+93,M,25,17,95825,25-34,technician/engineer
+94,M,25,17,28601,25-34,technician/engineer
+95,M,45,0,98201,45-49,other or not specified
+96,F,25,16,78028,25-34,self-employed
+97,F,35,3,66210,35-44,clerical/admin
+98,F,35,7,33547,35-44,executive/managerial
+99,F,1,10,19390,Under 18,K-12 student
+100,M,35,17,95401,35-44,technician/engineer
