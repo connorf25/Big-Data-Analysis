@@ -78,7 +78,7 @@ var xScale = d3.scaleLog()
 
 var attScale = d3.scaleSequential()
 	.domain([0, 20])
-	.interpolator(d3.interpolateRgb.gamma(2.2)("blue", "red"));
+	.interpolator(d3.interpolateRgb.gamma(2.2)("#c7ffce", "#00590b"));
 
 var hostScale = d3.scaleThreshold()
 	.domain(d3.range(0, 5))
@@ -591,8 +591,8 @@ function showMap(dataSet) {
 
 	slider.oninput = function () {
 		// TODO
-		// currentYear = ;
-		// output.innerHTML = ;
+		currentYear = slider.value;
+		output.innerHTML = slider.value;
 
 		if (currentTap == "Bubble")
 			translateAll(centerBBox);
@@ -824,7 +824,7 @@ function getCercle(coordinate, r) {
 		p0 = p1;
 	}
 
-	var radius = 10;
+	var radius = 5;
 	var centroid = d3.polygonCentroid(polygon);
 	var angleOffset = -2 * Math.PI;
 	var angle = 0;
