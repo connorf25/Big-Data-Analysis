@@ -12,8 +12,6 @@
         href="./theming.css" 
     >
 
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-
 </head>
 
 <body class="background">
@@ -45,7 +43,17 @@
     <div class="card m-5">
         <div class="card-body">
           <h2 class="card-title">Interactive Figures</h2>
-          <p class="card-text">Content goes here.</p>
+          <h5>Interactive Tree of Job Sectors</h5>
+          <p>Click on a node to expand or collapse tree</p>
+          <div id="charts">
+            <div id="observablehq-cfde5dd5"></div>
+            <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@connorf25/collapsible-tree.js?v=3";
+                const inspect = Inspector.into("#observablehq-cfde5dd5");
+                (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
+            </script>
+          </div>
         </div>
       </div>
 </body>
