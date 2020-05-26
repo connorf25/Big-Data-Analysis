@@ -42,18 +42,31 @@
 
     <div class="card m-5" style="text-align: center; max-width: none;">
         <div class="card-body">
-          <h2 class="card-title">Interactive Figures</h2>
-          <h5>Interactive Tree of Job Sectors/SubSectors</h5>
-          <p>Click on a node to expand or collapse tree</p>
-          <div id="charts">
-            <div id="observablehq-cfde5dd5"></div>
-            <script type="module">
-                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-                import define from "https://api.observablehq.com/@connorf25/collapsible-tree.js?v=3";
-                const inspect = Inspector.into("#observablehq-cfde5dd5");
-                (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
-            </script>
-          </div>
+            <h1 class="card-title">Interactive Figures</h1>
+
+            <h5>Interactive Tree of Job Sectors/SubSectors</h5>
+            <p>Click on a node to expand or collapse tree</p>
+            <div id="charts">
+                <div id="observablehq-cfde5dd5"></div>
+                <script type="module">
+                    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                    import define from "https://api.observablehq.com/@connorf25/collapsible-tree.js?v=3";
+                    const inspect = Inspector.into("#observablehq-cfde5dd5");
+                    (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
+                </script>
+            </div>
+
+            <h5>Interactive Tree of Job Location/Area</h5>
+            <p>Click on a node to expand or collapse tree</p>
+            <div id="charts">
+                <div id="observablehq-d8ba0802"></div>
+                <script type="module">
+                    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                    import define from "https://api.observablehq.com/@connorf25/location-collapsible-tree.js?v=3";
+                    const inspect = Inspector.into("#observablehq-d8ba0802");
+                    (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
+                </script>
+            </div>
         </div>
       </div>
 </body>
