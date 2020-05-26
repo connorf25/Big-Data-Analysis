@@ -44,6 +44,52 @@
         <div class="card-body m-5">
             <h1 class="card-title">Part 2 - Data Analysis and Interpretation</h1>
             <h3>2.1 - Job Metadata</h3>
+            <p>After dataset cleaning has been performed, there remains 309,870 data rows. The mean salary is $89.70 with a standard deviation of 108.55. The minimum potential salary is listed as $0 with the highest maximum at $999. It should be noted that the standard deviation for ‘HighestSalary’ is much bigger than ‘LowestSalary’ with values of 177.42 and 51.00 respectively.</p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Average Salary ($)</th>
+                        <th scope="col">Lowest Salary ($)</th>
+                        <th scope="col">Highest Salary($)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Mean</th>
+                        <td>89.70</td>
+                        <td>65.46</td>
+                        <td>133.93</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Standard Deviation</th>
+                        <td>108.55</td>
+                        <td>51.00</td>
+                        <td>177.42</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Minimum</th>
+                        <td>15.00</td>
+                        <td>0.00</td>
+                        <td>30.00</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Median</th>
+                        <td>65.00</td>
+                        <td>60.00</td>
+                        <td>70.00</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Max</th>
+                        <td>599.50</td>
+                        <td>200.00</td>
+                        <td>999.00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <b>Table 1: Description of Data Columns</b>
+            <p>As for categories within the dataset, for sectors there is a total of 30 sectors with 396 total sub-sectors for classification of job listings. In addition to this there is 65 locations with the main cities (Brisbane, Melbourne, Perth and Sydney) having a total of 22 smaller locations that the cities are broken down into.</p>
+
             <h5>Salary Disribution</h5>
             <p>
                 The first analysis of the Job metadata was to create a histogram of the job salaries to analyse the distribution of the salaries. As expected, lower salaries are much more common than higher salaries with the 3 most common bins by a large amount being 0-20, 40-60 and 60-80. This is to be expected however given the typical hierarchical structure of jobs with the majority of jobs being low to mid paying.
@@ -51,28 +97,20 @@
             <img src="img/figure1.png" /><br />
             <b>Figure 1: Histogram of Average Salary for all Listings</b>
             <p>
-                However, an anomaly in this histogram which is apparent is that there is a high number of outlier jobs paying $580 to $600. Using exploratory data analysis this bin will be analysed to determine what the root cause of this anomaly is.
-            </p>
-            <img src="img/figure2.png" style="width: 100%;"/><br />
-            <b>Figure 2: First 5 Outliers where the Average Salary is 580-600</b>
-            <p>
-                Analysis of the outliers appear to reveal that all if them contain an average salary of $599.5. This is an average between 200 and 999, which is the low and high salary for all these jobs. The predicted reason for this same salary is due to the fact that all of these jobs are listed at the highest possible price range allowed on SEEK.
-            </p>
-            <p>
-                Out of these outlier jobs; ICT, Healthcare, Construction, Mining and Government were the highest paying suggesting that these jobs may be the highest paying, however this will be explored further in the data.
+                The histogram demonstrates a high number outlier jobs paying $580 to $600. When analysing the market by sectors, exploratory data analysis will be used on the outliers to determine which job sectors are responsible for the outliers.
             </p>
 
             <h5>Average Salary Over Time</h5>
             <img src="img/figure3.png" /><br />
-            <b>Figure 3: Average Salary by Grouped by Month Boxplot</b>
+            <b>Figure 2: Average Salary by Grouped by Month Boxplot</b>
             <p>
                 The boxplot above for the average salary by month reveals that while salary is fairly stable, there was a sharp drop in November compared to other months. The predicted cause of this is that Christmas casual listings in retail spiked in November, causing the average salary for that month to be lower in comparison to the other months.
             </p>
             <p>
-                However, this boxplot fails to demonstrate another feature with the data which is present in the time series graph below (see Figure 4); that there was a huge spike in the average salary around early December. 
+                However, this boxplot fails to demonstrate another feature with the data which is present in the time series graph below (see Figure 3); that there was a huge spike in the average salary around early December. 
             </p>
             <img src="img/figure4.png" /><br />
-            <b>Figure 4: Time-series Graph for Salary</b>
+            <b>Figure 3: Time-series Graph for Salary</b>
             <p>
                 The large spike in early December is also evident on the rolling averages, however slightly delayed and less prominent. This is because rolling averages use an average of the past n-days, meaning that the data will be slower to respond to change. 
             </p>
@@ -82,19 +120,19 @@
 
             <h5>Number of Job Listings Time Analysis</h5>
             <p>
-                Analysing the daily job listings over time reveals a trend downwards. This is revealed in Figure 5 below which demonstrates the average number of daily job listings with exponential smoothing implemented, however this trend downwards may just be because of seasonality. Late November/December reveals a dip in the number of job listings which then spiked again around new year before dipping again.
+                Analysing the daily job listings over time reveals a trend downwards. This is revealed in Figure 4 below which demonstrates the average number of daily job listings with exponential smoothing implemented, however this trend downwards may just be because of seasonality. Late November/December reveals a dip in the number of job listings which then spiked again around new year before dipping again.
             </p>
             <p>
-                As for the monthly pattern of posting, it appears that the majority of jobs are posted in the middle of the month (see Figure 6). From the 23rd to the 28th in the month there appears to be overall a lower rate of posting. 
+                As for the monthly pattern of posting, it appears that the majority of jobs are posted in the middle of the month (see Figure 5). From the 23rd to the 28th in the month there appears to be overall a lower rate of posting. 
             </p>
             <img src="img/figure5.png" /><br />
-            <b>Figure 5: Number of Daily Job Listings with Exponential Weighted Smoothing</b><br /><br /><br />
+            <b>Figure 4: Number of Daily Job Listings with Exponential Weighted Smoothing</b><br /><br /><br />
             <img src="img/figure6.png" /><br />
-            <b>Figure 6: Number of Job Listings Grouped by Day of the Month</b><br /><br /><br />
+            <b>Figure 5: Number of Job Listings Grouped by Day of the Month</b><br /><br /><br />
 
             <h3>2.2 - Market by Locations</h3>
             <img src="img/figure7.png" /><br />
-            <b>Figure 7: Top 10 Job Locations</b>
+            <b>Figure 6: Top 10 Job Locations</b>
             <p>
                 As is expected, the main cities are where the majority of job listings appear in the major capital cities in Australia. Gold coast ranks 8th on this scale with 3581 job listings. Sydney is by far the largest with 17 times the number of listings at 60462 total listings. The number of job listings then appears to exponentially decrease when moving from the major cities to the minor cities.
             </p>
@@ -102,32 +140,40 @@
                 Analysis of the average salary at each location revealed an unexpected result; the top paying locations aren’t always the large cities. For example, the small town of Port Headland was ranked 7th with an average salary of $99.53 despite being a small country town. 
             </p>
             <img src="img/figure8.png" /><br />
-            <b>Figure 8: Job Categories in Port Headland</b>
+            <b>Figure 7: Job Categories in Port Headland</b>
             <p>
                 Analysis of the job categories in port headland reveal that the largest category by a fair amount is Mining, Resources & Energy. This may explain the unusually high salary for this area as the average salary for this sector is $128.66. This is more than likely the explanation for any small country town that has an unusually high salary, due to the high pay capacity of mining and energy jobs.
             </p>
 
             <h3>2.3 - Market by Sectors</h3>
             <img src="img/figure9.png" /><br />
-            <b>Figure 9: Number of Job Listings by Sector</b>
+            <b>Figure 8: Number of Job Listings by Sector</b>
             <p>
                 Analysis of the above bar chart reveals the sectors that are in high demand. The largest sector by some margin is ICT with 22715 total job listings in the dataset. Following this is trades & services along with healthcare & medial. Self employment was the least common category which is unsuprising considering SEEK is designed to allow companies to find employees.
             </p>
-            <img src="img/figure10.png" /><br />
-            <b>Figure 10: Average Job Salary each Sector Sorted by Number of Listings (left to right)</b>
-            <p>
-                Unsurprisingly, the highest paying classification is CEO & General Management followed by ICT. However, one thing to note is the difference between job availability for the two classifications as is shown in the number of job listings per sector (see Figure 8). This puts ICT in a better position for going into as a potential career path due to the higher demand.
-            </p>
             <img src="img/figure11.png" /><br />
-            <b>Figure 11: Number of Job Listings by Sector Over Time (30 day rolling average)</b>
+            <b>Figure 9: Number of Job Listings by Sector Over Time (30 day rolling average)</b>
             <p>
                 It appears in the number of job listings by sector there is continual decline until the start of December when a huge re-emergence in the number of job listings appears. Because the trend is being analysed over such a short timeframe. To assist with looking at the trend, linear regression will be implemented.
             </p>
             <p>
-                Figure 12 below demonstrates the implementation of linear regression. It is evident in the diagram that all sectors show an overall downtrend. Trades show the quickest decline, while all other fields show similar yet slower downtrends. However, because the data is only over 80 days, it is difficault to draw any solid conclusions.
+                Figure 10 below demonstrates the implementation of linear regression. It is evident in the diagram that all sectors show an overall downtrend. Trades show the quickest decline, while all other fields show similar yet slower downtrends. However, because the data is only over 80 days, it is difficault to draw any solid conclusions.
             </p>
             <img src="img/figure12.png" /><br />
-            <b>Figure 12: Trend of Job Listings with Linear Regression</b>
+            <b>Figure 10: Trend of Job Listings with Linear Regression</b>
+            <img src="img/figure10.png" /><br />
+            <b>Figure 11: Average Job Salary each Sector Sorted by Number of Listings (left to right)</b>
+            <p>
+                Unsurprisingly, the highest paying classification is CEO & General Management followed by ICT. However, one thing to note is the difference between job availability for the two classifications as is shown in the number of job listings per sector (see Figure 8). This puts ICT in a better position for going into as a potential career path due to the higher demand.
+            </p>
+            <img src="img/figure2.png" style="width: 100%;"/><br />
+            <b>Figure 12: First 5 Outliers where the Average Salary is 580-600</b>
+            <p>
+                Analysis of the outliers appear to reveal that all if them contain an average salary of $599.5. This is an average between 200 and 999, which is the low and high salary for all these jobs. The predicted reason for this same salary is due to the fact that all of these jobs are listed at the highest possible price range allowed on SEEK.
+            </p>
+            <p>
+                Out of these outlier jobs, ICT, Healthcare, Construction, Mining and Government are all prevalent sectors in the data further supporting the idea that these are the highest paying job categories.
+            </p>
             <br /><br /><br />
 
             <h3>2.4 - Interactive Results</h3>
