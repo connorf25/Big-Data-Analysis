@@ -4,7 +4,7 @@ margin = {
     top: 20,
     right: 10,
     bottom: 65,
-    left: 110
+    left: 180
 } //position of axes frame
 width = +svg.attr("width") - margin.left - margin.right,
 height = +svg.attr("height") - margin.top - margin.bottom;
@@ -55,7 +55,6 @@ d3.csv("data.csv", function(d) {
         .attr("y", -20) 
         .attr("dy", "1.0em") 
         .attr("text-anchor", "end")
-        .text("Location");
 
     var bars = g.selectAll('.bar')
         .data(data)
@@ -64,7 +63,7 @@ d3.csv("data.csv", function(d) {
         .attr("x1", 0)
         .attr("x2", 0)
         .attr("height", y.bandwidth())
-        .style("fill", "#a02f2b");
+        .style("fill", "#6b7fff");
 
     render('mean')
 
